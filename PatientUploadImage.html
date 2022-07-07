@@ -1,0 +1,24 @@
+{% extends 'PatientPage.html' %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data">
+   {% csrf_token %} 
+<table align="center">
+<tr>
+    <td><label>Upload Image</label></td>
+    <td><input type="file" name="file" class="textbox"></td>
+</tr>
+<tr>
+    <td><label>Details</label></td>
+    <td><input type="text" name="det" class="textbox"></td>
+</tr>
+<tr>
+    <td><input type="submit" value="Upload Now" name="Add" class="but"/></td>
+</tr>
+<tr>
+    <td colspan="2">
+        <h1>{{msg}}</h1>
+    </td>
+</tr>
+</table>
+
+{% endblock %}

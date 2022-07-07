@@ -1,0 +1,55 @@
+{% extends 'PatientPage.html' %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data">
+   {% csrf_token %} 
+<table align="center">
+<tr>
+    <td><label>Hospital</label></td>
+    <td><select name="dist" class="textbox" style="color: deeppink;">
+        <option value="">---Select Hospital---</option>
+        {% for d in data %}
+        <option value="{{d.1}}">{{d.1}}</option>
+        {% endfor %}
+    </select></td>
+</tr>
+
+<tr>
+    <td><input type="submit" value="Search" name="Add" class="but"/></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+{% if data1 %}
+<table class="customers">
+    <tr>
+        <th>Doctor ID</th>
+        <th>Name</th>
+        <th>Department</th>  
+        <th>Specialization</th>   
+        <th>Phone</th>  
+    </tr>
+    {% for d in data1 %}
+    <tr>
+        <td>{{d.0}}</td>
+        <td>{{d.1}}</td>
+        <td>{{d.4}}</td>
+        <td>{{d.5}}</td>
+        <td>{{d.3}}</td>
+        <td><a href="/PatientUploadImage/?id={{d.0}}">Consult Now</a></td>
+       
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <h1>No Registered Doctor's Available</h1>
+    {% endif %} 
+
+
+</form>
+{% if msg %}
+<script>
+    alert("{{msg}}")
+</script>
+{% endif %}
+{% endblock %}

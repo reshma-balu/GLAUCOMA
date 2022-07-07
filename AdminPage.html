@@ -1,0 +1,143 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Glycoma</title>
+<!--mobile apps-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="CareMed Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--mobile apps-->
+<!--Custom Theme files -->
+<link href="../static/Admin/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../static/Admin/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="../static/Admin/css/prettySticky.css" type="text/css">
+<!-- //Custom Theme files -->
+<!-- js -->
+<link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'> 
+      
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+      
+<script src= "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> 
+<script src="../static/Admin/js/jquery-1.11.1.min.js"></script> 
+
+<!-- //js -->
+<!-- start-smoth-scrolling-->
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+		
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smoth-scrolling-->
+</head>
+<body>
+	<!--banner-->
+	<div  id="home" class="banner about-banner">
+		<div class="banner-info">
+			<!--navigation-->
+			<div class="top-nav">
+				<nav>
+					<div class="container">
+						<div class="navbar-header logo">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<h1><a href="index.html">Glycoma</a></h1>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-right">
+								<li><a href="/AdminHome" class="link-kumya active scroll"><span data-letters="Home">Home</span></a></li>
+                                <li class="dropdown">
+									<a href="codes.html" class="link-kumya" data-hover="Pages" data-toggle="dropdown"><span data-letters="Hospital">Hospital </span><b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/AdminAddHospital" ><span data-letters="Add">Add</span></a></li>
+										<li><a href="/AdminViewHospital" ><span data-letters="View">View</span></a></li>
+									</ul>
+                                </li>
+                                <li class="dropdown">
+									<a href="codes.html" class="link-kumya" data-hover="Pages" data-toggle="dropdown"><span data-letters="Doctors">Doctors </span><b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/AdminViewDoctors" ><span data-letters="Registered">Registered</span></a></li>
+										<li><a href="/AdminViewApprovedDoctors" ><span data-letters="Approved">Approved</span></a></li>
+									</ul>
+								</li>
+								
+								<!-- <li><a href="/AdminViewFeedback" class="link-kumya"><span data-letters="Feedback">Feedback</span></a></li>		 -->
+								<li><a href="/" class="link-kumya"><span data-letters="Logout">Logout</span></a></li>
+							</ul>	
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</nav>
+			</div>	
+			<!--//navigation-->
+			
+		</div>
+	</div>
+	<!--//banner-->
+	<!--single-page-->
+	<div class="single-page blog">
+		<div class="container">			
+            
+            
+            {% block body %}
+				{% endblock %}
+        </div>
+    </div>
+	<!--//single-page-->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-4 footer-grids">
+				<h3>Review</h3>
+				<p>Sed ut turpis elit ullamcorper in auctor non, accumsan vel lacus nulla auctor cursus nunc. Maecenas ultricies dolor in urna tempus, id egestas erat finibus  interdum lectus eget scelerisque.</p>
+			</div>
+			<div class="col-md-3 footer-grids">
+				<h3>Contact Me</h3>
+				<p>123 NewYork City USA.<br>
+					<span>Office: 908-0000</span>
+				</p>
+				<div class="footer-bottom">
+					<a href="#"><span>Facebook</span></a>
+					<a href="#"><span>Pinterest</span></a>
+					<a href="#"><span>LinkedIn </span></a>
+					<a href="#"><span>Behance</span></a>
+				</div>
+			</div>
+			<div class="col-md-5 footer-grids">
+				<h3>Flickr</h3>
+				<a  class="footer-img" href="single.html"> <img src="../static/Admin/images/f1.jpg" alt=""/></a>
+				<a class="footer-img" href="single.html"> <img src="../static/Admin/images/f2.jpg" alt=""/></a>
+				<a class="footer-img" href="single.html"> <img src="../static/Admin/images/f3.jpg" alt=""/></a>
+			</div>
+			<div class="clearfix"> </div>
+			<div class="footer-copy">
+				<p>© 2020 Glycoma. All rights reserved | Design by <a href="http://w3layouts.com">Glycoma</a></p>
+			</div>
+		</div>
+	</div>
+	<!--//footer-->
+	<!-- script-for prettySticky -->
+	<script src="../static/Admin/js/prettySticky.js"></script>
+	<!--//script-for prettySticky -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/Admin/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'AdminPage.html' %}
+{% block body %}
+<form action="#" method="post" >
+{% csrf_token %}
+{% if data %}
+<table class="customers">
+    <tr>
+        <th>Doctor ID</th>
+        <th>Name</th>
+        <th>Department</th>  
+        <th>Specialization</th>   
+        <th>Hospital</th>  
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td>{{d.0}}</td>
+        <td>{{d.1}}</td>
+        <td>{{d.4}}</td>
+        <td>{{d.5}}</td>
+        <td>{{d.7}}</td>
+        <td><a href="/AdminViewDoctors/?id={{d.0}}&st=Accept">Accept</a></td>
+        <td><a href="/AdminViewDoctors/?id={{d.0}}&st=Reject">Reject</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <h1>No Registered Doctor's Available</h1>
+    {% endif %} 
+{% endblock %}

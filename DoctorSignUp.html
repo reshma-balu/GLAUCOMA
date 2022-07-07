@@ -1,0 +1,41 @@
+{% extends 'CommonPage.html' %}
+
+
+{% block body %}
+<div class="input-info">
+		
+										
+									</div>
+									<div class="form-body form-body-info">
+									
+										<form data-toggle="validator"  method="post">
+                                        {% csrf_token %}
+											<div class="form-group valid-form">
+												<input type="text" class="form-control" id="inputName" name="cname" placeholder="Name" required="">
+												<input type="text" class="form-control" id="inputName" name="address" placeholder="Department" required="">
+											</div>
+											<select name="hosp" value=" " class="form-control" style="color: deeppink; width: 100%;">
+												<option>---Select Hospital---</option>
+													{%for c in data %}
+												<option value="{{c.1}}">{{c.1}}</option>
+													{% endfor %}
+												</select>	
+											<div class="form-group has-feedback">
+												<input type="email" class="form-control" name="Email" placeholder="Email" data-error="That email address is invalid" required="">
+												<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+												<span class="help-block with-errors">Please enter a valid email address</span>
+											</div>
+											<input type="text" class="form-control" id="inputName" name="mobile" placeholder="Mobile" required="">
+											<input type="text" class="form-control" id="inputName" name="sprc" placeholder="Specialization" required="">
+											<div class="form-group">
+											  <input type="password" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" name="Password" placeholder="Password" required="">
+											  <span class="help-block">Minimum of 6 characters</span>
+											</div>
+											
+											
+											<div class="form-group">
+												<button type="submit" name="submit" class="btn btn-primary disabled">Submit</button>
+											</div>
+										</form>
+										</div>
+										{% endblock %}

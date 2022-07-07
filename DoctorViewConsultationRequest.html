@@ -1,0 +1,24 @@
+{% extends 'DoctorPage.html' %}
+{% block body %}
+<form action="#" method="post" >
+{% csrf_token %}
+<table class="customers">
+    <tr>
+        <th>Customer ID</th>
+        <th>Customer</th> 
+        <th>Phone</th>  
+        <th>Details</th>    
+        <th>Image</th>    
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td>{{d.0}}</td>
+        <td>{{d.1}}</td>
+        <td>{{d.5}}</td>
+        <td>{{d.13}}</td>
+        <td><a href="../static{{d.14}}">Download</a></td>
+        <td><a href="/DoctorViewConsultationRequest/?id={{d.10}}&st=Reject&fo={{d.5}}">Reject</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
